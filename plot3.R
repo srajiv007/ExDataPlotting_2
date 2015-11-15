@@ -35,7 +35,7 @@ print.plot3<-function(data, dir = "Project2 (Exploratory Analysis)"){
         nei.dt<-data[data$fips=="24510", ]
         
         t<-nei.dt[, .("total"=sum(Emissions)), by=.(year, type)]
-        p<-create.ggplot2(t, "Total Emissions\n(by Type)")+facet_wrap(~type, ncol=2, scales="free")
+        p<-create.ggplot2(t, "Total Emissions (Baltimore)\n(by Type)")+facet_wrap(~type, ncol=2, scales="free")
         print.png(p, dir, "plot3.png")
 }
 
